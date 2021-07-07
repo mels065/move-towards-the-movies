@@ -5,5 +5,3 @@ MAPBOX_PARAMS = `types=postcode&access_token=${MAPBOX_API_KEY}`;
 function generateApiCall(zipcode) {
     return `${MAPBOX_ENPOINT}/${zipcode}.json?${MAPBOX_PARAMS}`;
 }
-
-console.log(generateApiCall(48823));
