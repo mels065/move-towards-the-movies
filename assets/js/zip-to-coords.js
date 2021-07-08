@@ -1,3 +1,5 @@
+
+
 function getCoordinatesFromZipCode(zipcode) {
     return fetch(generateApiCall(zipcode))
         .then((response) => {
@@ -10,7 +12,8 @@ function getCoordinatesFromZipCode(zipcode) {
         });
 }
 
-getCoordinatesFromZipCode("48823")
-    .then((coords) => {
-        console.log(coords);
-    });
+// getCoordinatesFromZipCode(zip)
+//     .then((coords) => {
+//         console.log(coords);
+//     });
+
