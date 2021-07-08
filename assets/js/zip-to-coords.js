@@ -1,5 +1,5 @@
 function getCoordinatesFromZipCode(zipcode) {
-    return fetch(generateApiCall(zipcode))
+    return fetch(generateMapBoxApiCall(zipcode))
         .then((response) => {
             return response.json();
         })
@@ -16,9 +16,3 @@ function getCoordinatesFromZipCode(zipcode) {
             return coords;
         });
 }
-
-// Since a promise is returned, chain with a `then` call.
-getCoordinatesFromZipCode("48823")
-    .then((coords) => {
-        console.log(coords);
-    });
