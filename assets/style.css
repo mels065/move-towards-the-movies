@@ -1,0 +1,14 @@
+* {
+  font-family: "Playfair Display", serif;
+}
+
+.header-cont {
+  border: 3px outset #4a4a4a;
+}
+
+header {
+  text-align: center;
+  background-color: hsl(171, 100%, 41%);
+  font-size: 3rem;
+  font-weight: 600;
+}
