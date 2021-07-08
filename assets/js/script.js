@@ -24,9 +24,21 @@ $(document).ready(function(){
             console.log(zipCode);
             zipInputEl.value = '';            
         } else {
-            alert('Please input 5 digit zip code');
+            zipInputEl.value = '';
+            $(".modal").addClass("is-active");
         }
       };
+
+    $(".modal-close").click(function() {
+        console.log("close");
+        $(".modal").removeClass("is-active");
+    });
+
+    // cancel button doesn't clear modal is-active
+    $("#cancel-button").click(function() {
+        console.log("cancel");
+        $(".modal").removeClass("is-active");
+    });
 
     $('.button').on('click', formSubmitHandler);
 })
