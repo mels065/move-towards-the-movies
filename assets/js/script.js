@@ -36,9 +36,11 @@ $(document).ready(function(){
 
     // cancel button doesn't clear modal is-active
     $("#cancel-button").click(function() {
-        console.log("cancel");
-        $(".modal").removeClass("is-active");
-    });
+            console.log("cancel");
+            zipInputEl.value ="48098";
+//            $("#test").removeClass("is-active");
+            $(this).parents(".modal").removeClass("is-active");
+        });
 
     $('.button').on('click', formSubmitHandler);
 })
