@@ -1,0 +1,2 @@
+function getTheaters(coords) {
+}
