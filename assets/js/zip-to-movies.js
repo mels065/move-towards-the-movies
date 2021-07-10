@@ -7,29 +7,20 @@ function getMovies(zipcode) {
     return fetch(movieApiUrl)
     .then(function (response) {
         data = response.json();
-//        console.log(data);
-//        return response.json();
-//        showMovies(data);
         return data;
     })
     .then(function (data) {
         var movies = data;
         result = data;
-        console.log(movies);
-        // for (var i = 0; i < movies.length; i++){
-        //     console.log(movies[i].title);
-        // }
-        // return movies;
+//        console.log(movies);
         showMovies(movies);
     });
 }
 
 var showMovies = function (input){
     var movies = input;
-//    console.log(movies);
     for (var i=0; i < movies.length; i++) {
         console.log(movies[i].title);
-
         $("#"+i).html('<span class="tag is-info is-large">' + result[i].title + '</span>' + '<span class="tag is-white normal">' + result[i].genres);
     }
 };
@@ -38,7 +29,6 @@ var getMovieInfo = function (input){
     var i = parseInt(input,10);
     console.log(i);
 
-//    $("#movie-info").html(result[i].title + result[i].genres);
     $("#movie-info").html('<span class="tag is-white is-large">' + result[i].title + '</span><br>' + 
         '<span class="tag is-white is-normal">' + "Genres: " + result[i].genres + '</span></br>' +
         '<span class="tag is-white is-normal">' + "Director(s): " + result[i].directors + '</span></br>' +
@@ -50,7 +40,6 @@ var getMovieInfo = function (input){
 
 
 $(".box").on('click', function(){
-//    cityInputEl.value = $('#M1').text();
     var movie = $(this).attr('id');
     console.log(movie, result);
     getMovieInfo(movie);

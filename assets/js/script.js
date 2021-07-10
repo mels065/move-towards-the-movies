@@ -1,12 +1,15 @@
 var zipInputEl = document.querySelector('.input');
 
-//var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zipCode);
 var zipCode = "";
+var movies;
+var mykey = 'szypphu7z3nfwr9f5bu824pw';
+var fromDate = moment().format('YYYY-MM-DD');
 
 
 
 
 $(document).ready(function(){
+
 
     function isValidUSZip(zipCode){
         var postalCodeRegex = /^([0-9]{5})(?:[-\s]*([0-9]{4}))?$/;
@@ -15,18 +18,24 @@ $(document).ready(function(){
 
     var formSubmitHandler = function (event) {
         event.preventDefault();
+//        var movies;
         zipCode = String(zipInputEl.value.trim());
         if (isValidUSZip(zipCode)) {
                 getCoordinatesFromZipCode(zipCode)
                 .then((coords) => {
                     console.log(coords.lat + "," + coords.lon);
                 });
-            console.log(zipCode);
+
+
             zipInputEl.value = '';            
         } else {
             zipInputEl.value = '';
-            $(".modal").addClass("is-active");
+            $("#test").addClass("is-active");
         }
+
+         movies = getMovies(zipCode);
+    //      console.log("returned",movies);
+    //  showMovies(movies);
       };
 
     $(".modal-close").click(function() {
@@ -42,5 +51,7 @@ $(document).ready(function(){
             $(this).parents(".modal").removeClass("is-active");
         });
 
-    $('.button').on('click', formSubmitHandler);
+    $('#SearchBttn').on('click', formSubmitHandler);
+//    console.log(moment());
 })
+
