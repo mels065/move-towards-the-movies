@@ -2,7 +2,7 @@ var zipInputEl = document.querySelector('.input');
 
 var zipCode = "";
 var movies;
-var mykey = API_key;
+var mykey = 'szypphu7z3nfwr9f5bu824pw';
 var fromDate = moment().format('YYYY-MM-DD');
 
 
@@ -51,7 +51,7 @@ $(document).ready(function(){
             $(this).parents(".modal").removeClass("is-active");
         });
 
-    $('.button').on('click', formSubmitHandler);
-    console.log(moment());
+    $('#SearchBttn').on('click', formSubmitHandler);
+//    console.log(moment());
 })
 
