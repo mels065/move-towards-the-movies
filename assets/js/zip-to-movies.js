@@ -14,6 +14,7 @@ function getMovies(zipcode) {
         result = data;
 //        console.log(movies);
         showMovies(movies);
+        return movies;
     });
 }
 
