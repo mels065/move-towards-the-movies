@@ -19,10 +19,18 @@ function displaySearchHistory() {
         $("#searchList").append("<li>No search history at this time...</li>");
     } else {
         [...searchHistory].reverse().forEach((item) => {
-            const el = $(`<li class="search-history-item">${item}</li>`);
-            $("#searchList").append(el);
+            // Add the function for performing searches to the `onClick` attribute
+            const li = $('<li class="search-history-item">');
+            const btn = $(`<button class="button">${item}</button>`);
+            
+            // Replace this callback with whatever the function is for fetching data
+            btn.click(() => { console.log(`${item} clicked`) });
+
+            li.append(btn);
+            $("#searchList").append(li);
         });
     }
 }
 
-getSearchHistory();
+addSearchHistory("48823");
+addSearchHistory("12345");
