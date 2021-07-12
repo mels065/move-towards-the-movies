@@ -12,3 +12,7 @@ header {
   font-size: 3rem;
   font-weight: 600;
 }
+
+body{
+  background-color: lightgray;
+}
