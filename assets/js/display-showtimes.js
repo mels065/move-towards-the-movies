@@ -27,7 +27,7 @@ function getShowtimeListElement(movie) {
 function getTimesHtmlString(times) {
     let html = "";
     for (let i = 0; i < times.length; i++) {
-        html += `<span class="showtime-time">${times[i]}</span> `;
+        html += `<span class="showtimes-time">${times[i]}</span> `;
     }
     return html;
 }
