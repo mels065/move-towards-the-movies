@@ -1,11 +1,9 @@
 let searchHistory = new Set();
 
 function addSearchHistory(item) {
-    if (!searchHistory.has(item)) {
-        searchHistory.add(item);
-        localStorage.setItem("searchHistory", JSON.stringify([...searchHistory]));
-        displaySearchHistory()
-    }
+    searchHistory.add(item);
+    localStorage.setItem("searchHistory", JSON.stringify([...searchHistory]));
+    displaySearchHistory();
 }
 
 function getSearchHistory() {
@@ -24,13 +22,10 @@ function displaySearchHistory() {
             const btn = $(`<button class="button">${item}</button>`);
             
             // Replace this callback with whatever the function is for fetching data
-            btn.click(() => { console.log(`${item} clicked`) });
+            btn.click(() => { search(item) });
 
             li.append(btn);
             $("#searchList").append(li);
         });
     }
 }
-
-addSearchHistory("48823");
-addSearchHistory("12345");
