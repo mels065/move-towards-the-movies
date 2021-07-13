@@ -1,17 +1,17 @@
 let searchHistory = new Set();
 
-function addSearchHistory(item) {
+function addSearchHistory(item, buttonClickCallback) {
     searchHistory.add(item);
     localStorage.setItem("searchHistory", JSON.stringify([...searchHistory]));
-    displaySearchHistory();
+    displaySearchHistory(buttonClickCallback);
 }
 
-function getSearchHistory() {
+function getSearchHistory(buttonClickCallback) {
     searchHistory = new Set(JSON.parse(localStorage.getItem("searchHistory")));
-    displaySearchHistory()
+    displaySearchHistory(buttonClickCallback)
 }
 
-function displaySearchHistory() {
+function displaySearchHistory(buttonClickCallback) {
     $("#searchList").html("");
     if (searchHistory.size === 0) {
         $("#searchList").append("<li>No search history at this time...</li>");
@@ -22,7 +22,7 @@ function displaySearchHistory() {
             const btn = $(`<button class="button">${item}</button>`);
             
             // Replace this callback with whatever the function is for fetching data
-            btn.click(() => { console.log(`${item} clicked`) });
+            btn.click(() => { buttonClickCallback(item) });
 
             li.append(btn);
             $("#searchList").append(li);

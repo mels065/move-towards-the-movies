@@ -1,4 +1,4 @@
-function search(zipcode) {
+function search(zipCode) {
     if (isValidUSZip(zipCode)) {
         getCoordinatesFromZipCode(zipCode)
         .then((coords) => {

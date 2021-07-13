@@ -12,7 +12,7 @@ var fromDate = moment().format('YYYY-MM-DD');
 
 
 $(document).ready(function(){
-    getSearchHistory();
+    getSearchHistory(search);
 
     var formSubmitHandler = function (event) {
         event.preventDefault();
@@ -21,7 +21,7 @@ $(document).ready(function(){
             .then((movies) => {
                 // If movies data exists, add zipcode to search history
                 if (movies) {
-                    addSearchHistory(zipCode);
+                    addSearchHistory(zipCode, search);
                 }
             })
       };
