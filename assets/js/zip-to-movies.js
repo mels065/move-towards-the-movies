@@ -14,6 +14,7 @@ function getMovies(zipcode) {
         result = data;
 //        console.log(movies);
         showMovies(movies);
+        return movies;
     });
 }
 
@@ -35,6 +36,8 @@ var getMovieInfo = function (input){
         '<span class="tag is-white is-normal">' + "Cast: " + result[i].topCast + '</span></br>' +
         '<span class="tag is-white is-normal">' + '<a href=' + result[i].officialUrl + ' target="_blank">visit official movie page</a></span></br>' +
         '<span class="content is-normal">' + "Description: " + result[i].longDescription + '</span>');
+    $("#movie-info").append('<h3 class="showtimes-header">Showtimes</h3>');
+    $("#movie-info").append(getShowtimeListElement(result[i]));
     $("#movie-modal").addClass("is-active");
 };
 
