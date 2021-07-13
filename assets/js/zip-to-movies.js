@@ -29,7 +29,6 @@ var showMovies = function (input){
 
 var getMovieInfo = function (input){
     var i = parseInt(input,10);
-    console.log(i);
     movieName = result[i].title;
 
     $("#movie-info").html('<span class="tag is-white is-large">' + result[i].title + '</span><br>' + 
@@ -43,7 +42,7 @@ var getMovieInfo = function (input){
 };
 
 
-$(".box").on('click', function(){
+$(".movie").on('click', function(){
     var movie = $(this).attr('id');
     console.log(movie, result);
     getMovieInfo(movie);
