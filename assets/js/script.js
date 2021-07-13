@@ -20,6 +20,7 @@ $(document).ready(function(){
         event.preventDefault();
 //        var movies;
         zipCode = String(zipInputEl.value.trim());
+        console.log(zipCode);
         if (isValidUSZip(zipCode)) {
                 getCoordinatesFromZipCode(zipCode)
                 .then((coords) => {
