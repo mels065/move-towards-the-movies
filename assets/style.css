@@ -13,6 +13,9 @@ header {
   font-weight: 600;
 }
 
+.movie-title {
+  cursor: pointer;
+}
 
 .showtimes-header {
   font-weight: bold;
