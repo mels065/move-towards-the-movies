@@ -13,6 +13,7 @@ header {
   font-weight: 600;
 }
 
+
 .showtimes-header {
   font-weight: bold;
   font-size: 1.1rem;
@@ -26,4 +27,7 @@ header {
   background: #1ca352;
   color: white;
   font-weight: bold;
+}
+body{
+  background-color: lightgray;
 }
