@@ -7,7 +7,9 @@ var mykey = API_key;
 var fromDate = moment().format('YYYY-MM-DD');
 //var apiUrl = 'http://data.tmsapi.com/v1.1/movies/showings?startDate=' + fromDate + '&zip=' + zipCode + '&api_key=' + mykey;
 
-
+// an array to store zip codes previously checked
+var zipArray = [];
+zipArray.length = 10;
 
 
 $(document).ready(function(){
@@ -58,6 +60,7 @@ $(document).ready(function(){
 //        var movies;
         zipCode = String(zipInputEl.value.trim());
         if (isValidUSZip(zipCode)) {
+                saveZip(zipCode);
                 getCoordinatesFromZipCode(zipCode)
                 .then((coords) => {
                     console.log(coords.lat + "," + coords.lon);
@@ -90,5 +93,55 @@ $(document).ready(function(){
 
     $('.button').on('click', formSubmitHandler);
     console.log(moment());
+
+
+    var removeZipDuplicates = function(input){
+        if (zipArray.length > 0){
+          const index = zipArray.indexOf(input);
+          if (index > -1) {
+            zipArray.splice(index, 1);
+          }
+        }
+        // push new entery to begining of array
+        zipArray.unshift(input);
+        return;
+    };
+
+    var displayMemory = function () {
+        for (var i = 0; i < zipArray.length; i++){
+            if(zipArray[i]){
+                console.log("id=",i.toString());
+                $("#memory").after("<div>").attr('id', 'M'+i.toString());
+                $('#M'+i.toString()).html('<span class="tag is-blue is-medium">' + zipArray[i] + '</span>');
+            }
+        }
+        // $('#memory').html('<span class="tag is-blue is-medium">' + zipArray[0] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[1] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[2] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[3] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[4] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[5] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[6] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[7] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[8] + '</span><br>' +
+        //                 '<span class="tag is-blue is-medium">' + zipArray[9] + '</span>');
+
+        return;
+    };
+
+    var saveZip = function (input) {
+        removeZipDuplicates(input);
+        for (var i = 0; i < 8; i ++){
+            localStorage.setItem(i, zipArray[i]);
+        }
+        displayMemory();
+        console.log(zipArray);
+        return;
+    };
+
+    // $("#memory").on("click", function(){
+    //     var zipcode = $(this).text();
+    //     getMovies(zipcode);
+    //   })
 })
 

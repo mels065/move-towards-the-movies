@@ -7,19 +7,13 @@ function getMovies(zipcode) {
     return fetch(movieApiUrl)
     .then(function (response) {
         data = response.json();
-//        console.log(data);
-//        return response.json();
-//        showMovies(data);
         return data;
     })
     .then(function (data) {
         var movies = data;
         result = data;
         console.log(movies);
-        // for (var i = 0; i < movies.length; i++){
-        //     console.log(movies[i].title);
-        // }
-        // return movies;
+
         showMovies(movies);
     });
 }
