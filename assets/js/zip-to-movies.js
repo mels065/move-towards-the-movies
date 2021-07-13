@@ -25,7 +25,7 @@ var showMovies = function (input){
     var movies = input;
     for (var i=0; i < movies.length; i++) {
         console.log(movies[i].title);
-        $("#"+i).html('<span class="tag is-info is-large">' + result[i].title + '</span>' + '<span class="tag is-white normal">' + result[i].genres);
+        $("#"+i).html('<span class="movie-title tag is-info is-large">' + result[i].title + '</span>' + '<span class="movie-genres tag is-white normal">' + result[i].genres);
     }
 };
 
