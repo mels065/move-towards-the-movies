@@ -12,10 +12,23 @@ var fromDate = moment().format('YYYY-MM-DD');
 
 
 $(document).ready(function(){
+$("#info").hide();
+
+    function isValidUSZip(zipCode){
+        var postalCodeRegex = /^([0-9]{5})(?:[-\s]*([0-9]{4}))?$/;
+        return postalCodeRegex.test(zipCode);
+    }
+
     getSearchHistory();
 
+
     var formSubmitHandler = function (event) {
+
         event.preventDefault();
+ 
+//        var movies;
+
+
         zipCode = String(zipInputEl.value.trim());
         search(zipCode)
             .then((movies) => {
