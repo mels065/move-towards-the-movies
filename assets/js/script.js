@@ -12,6 +12,8 @@ var fromDate = moment().format('YYYY-MM-DD');
 
 
 $(document).ready(function(){
+    getSearchHistory();
+
     var formSubmitHandler = function (event) {
         event.preventDefault();
         zipCode = String(zipInputEl.value.trim());

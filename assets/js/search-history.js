@@ -1,11 +1,9 @@
 let searchHistory = new Set();
 
 function addSearchHistory(item) {
-    if (!searchHistory.has(item)) {
-        searchHistory.add(item);
-        localStorage.setItem("searchHistory", JSON.stringify([...searchHistory]));
-        displaySearchHistory()
-    }
+    searchHistory.add(item);
+    localStorage.setItem("searchHistory", JSON.stringify([...searchHistory]));
+    displaySearchHistory();
 }
 
 function getSearchHistory() {
@@ -31,6 +29,3 @@ function displaySearchHistory() {
         });
     }
 }
-
-addSearchHistory("48823");
-addSearchHistory("12345");
