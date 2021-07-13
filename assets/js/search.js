@@ -13,6 +13,7 @@ function search(zipcode) {
     }
 
     movies = getMovies(zipCode);
+    return movies;
 }
 
 function isValidUSZip(zipCode){

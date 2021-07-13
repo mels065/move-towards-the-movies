@@ -15,7 +15,13 @@ $(document).ready(function(){
     var formSubmitHandler = function (event) {
         event.preventDefault();
         zipCode = String(zipInputEl.value.trim());
-        search(zipCode);
+        search(zipCode)
+            .then((movies) => {
+                // If movies data exists, add zipcode to search history
+                if (movies) {
+                    addSearchHistory(zipCode);
+                }
+            })
       };
 
     $(".modal-close").click(function() {
