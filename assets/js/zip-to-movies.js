@@ -1,5 +1,6 @@
 var movieInputEl = document.querySelector('#info');
 var result;
+var movieName;
 
 function getMovies(zipcode) {
     var fromDate = moment().format('YYYY-MM-DD');
@@ -12,7 +13,8 @@ function getMovies(zipcode) {
     .then(function (data) {
         var movies = data;
         result = data;
-//        console.log(movies);
+        console.log(result);
+        console.log(movies);
         showMovies(movies);
         return movies;
     });
@@ -28,7 +30,7 @@ var showMovies = function (input){
 
 var getMovieInfo = function (input){
     var i = parseInt(input,10);
-//    console.log(i);
+    movieName = result[i].title;
 
     $("#movie-info").html('<span class="tag is-white is-large">' + result[i].title + '</span><br>' + 
         '<span class="tag is-white is-normal">' + "Genres: " + result[i].genres + '</span></br>' +
@@ -39,13 +41,13 @@ var getMovieInfo = function (input){
     $("#movie-info").append('<h3 class="showtimes-header">Showtimes</h3>');
     $("#movie-info").append(getShowtimeListElement(result[i]));
     $("#movie-modal").addClass("is-active");
+    
 };
 
 
 $(".movie").on('click', function(){
     var movie = $(this).attr('id');
-//    console.log(movie, result);
-    if (result) {
-        getMovieInfo(movie);
-    }
+    console.log(movie, result);
+    getMovieInfo(movie);
+    goGetTheMovieID(movieName);
 })
