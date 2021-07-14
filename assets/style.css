@@ -13,6 +13,11 @@ header {
   font-weight: 600;
 }
 
+i {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .movie-title {
   cursor: pointer;
 }
@@ -31,6 +36,6 @@ header {
   color: white;
   font-weight: bold;
 }
-body{
+body {
   background-color: lightgray;
 }
