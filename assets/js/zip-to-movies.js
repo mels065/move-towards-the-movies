@@ -5,7 +5,7 @@ var movieName;
 function getMovies(zipcode) {
     $("#info").show();
     var fromDate = moment().format('YYYY-MM-DD');
-    movieApiUrl = 'http://data.tmsapi.com/v1.1/movies/showings?startDate=' + fromDate + '&zip=' + zipcode + '&api_key=' + mykey;
+    movieApiUrl = 'https://data.tmsapi.com/v1.1/movies/showings?startDate=' + fromDate + '&zip=' + zipcode + '&api_key=' + mykey;
     return fetch(movieApiUrl)
     .then(function (response) {
         data = response.json();
