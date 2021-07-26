@@ -1,16 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 * {
   font-family: "Playfair Display", serif;
-}
-
-.header-cont {
-  border: 3px outset #4a4a4a;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 header {
   text-align: center;
-  background-color: hsl(171, 100%, 41%);
   font-size: 3rem;
   font-weight: 600;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  padding-bottom: 10px;
+}
+
+header .h1 {
+  font-family: "Poppins", sans-serif;
+  border-bottom: 4px solid white;
+  font-weight: bolder;
+  margin: 0 60px;
+}
+
+.fas {
+  margin-top: 10px;
 }
 
 i {
@@ -36,6 +58,19 @@ i {
   color: white;
   font-weight: bold;
 }
-body {
-  background-color: lightgray;
+
+label {
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.box {
+  cursor: pointer;
+}
+
+.box {
+  box-shadow: 10px 12px 5px -5px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 10px 12px 5px -5px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 10px 12px 5px -5px rgba(0, 0, 0, 0.46);
 }
