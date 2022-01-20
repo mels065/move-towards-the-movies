@@ -7,7 +7,7 @@ Move Towards the Movies is a web app that fetches movie data from the GraceNote 
    
   ## Visit live website [Here](https://mels065.github.io/move-towards-the-movies/)
   
-  ### Link to slideshow presentation [Here] https://docs.google.com/presentation/d/1zMsFVAGrXDHn_u_J-MU6sfwzaNHVD2xB1NKarQRnqAM/edit?usp=sharing
+  ### Link to slideshow presentation [Here](https://docs.google.com/presentation/d/1zMsFVAGrXDHn_u_J-MU6sfwzaNHVD2xB1NKarQRnqAM/edit?usp=sharing)
    
 ![move movies 2](https://user-images.githubusercontent.com/84198162/150434407-5686afe5-91db-4b4f-a154-47811b599334.png)
 
