@@ -6,6 +6,8 @@
 Move Towards the Movies is a web app that fetches movie data from the GraceNote Movie API based on the zipcode and displays all movies playing in the area. The user can then click a movie and see details on the movie, showtimes, and an image fetched from TMDB API.
    
   ## Visit live website [Here](https://mels065.github.io/move-towards-the-movies/)
+  
+  ### Link to slideshow presentation [Here] https://docs.google.com/presentation/d/1zMsFVAGrXDHn_u_J-MU6sfwzaNHVD2xB1NKarQRnqAM/edit?usp=sharing
    
 ![move movies 2](https://user-images.githubusercontent.com/84198162/150434407-5686afe5-91db-4b4f-a154-47811b599334.png)
 
