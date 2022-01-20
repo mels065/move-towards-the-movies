@@ -1,11 +1,42 @@
-# move-towards-the-movies
+ ### Table of Contents 
+ [Prerequisites](#prerequisites) | [Installation](#installation-intstructions) | [Tools](#tools) | [Authors](#authors) | [Contribution](#contribution) | [Licensing](#licensing) 
 
-This application lets the user search for a list of newly released movies near them using their zip code. After clicking on the movies presented, a modal will pop up that gives information about the movie - including a description, a picture, as well as the times of showing at the cinema nearest the zip code.
+# Move Towards the Movies
+ 
+Move Towards the Movies is a web app that fetches movie data from the GraceNote Movie API based on the zipcode and displays all movies playing in the area. The user can then click a movie and see details on the movie, showtimes, and an image fetched from TMDB API.
+   
+  ## Visit live website [Here](https://mels065.github.io/move-towards-the-movies/)
+   
+ ![_C__Users_kevin_Projects_Homework_Project%201_move-towards-the-movies_index html (3)](https://user-images.githubusercontent.com/84198162/125543502-7429eeb5-8384-4286-9582-42de4103f52d.png)
 
-Link to deployed application: https://mels065.github.io/move-towards-the-movies/
+ ## Getting started
+    
+ ### Prerequisites
+    
+ Follow the steps at the website below to install Visual Studio Code: 
 
-Link to slideshow presentation: https://docs.google.com/presentation/d/1zMsFVAGrXDHn_u_J-MU6sfwzaNHVD2xB1NKarQRnqAM/edit?usp=sharing
+ https://code.visualstudio.com/download
 
-![_C__Users_kevin_Projects_Homework_Project%201_move-towards-the-movies_index html (3)](https://user-images.githubusercontent.com/84198162/125543502-7429eeb5-8384-4286-9582-42de4103f52d.png)
+
+### Installation Intstructions
+ Clone the project repo and then open the project in Visual Studio Code. Right click on index.html to open the website in your browser.
+
+### Tools
+- [Jquery](https://jquery.com/) - Javascript library
+- [Bulma](https://bulma.io/) - CSS framework
+- [Gracenote API](https://developer.tmsapi.com/docs/read/data_v1_1/movies) - Movie theater API
+- [TMDB API](https://www.themoviedb.org/documentation/api) - Movie API
+
+## Authors
+* [Brandon Mellus](https://github.com/mels065)
+* [Amir Ahmadi](https://github.com/eamahma)
+* [Christopher Breen](https://github.com/Chrisbr916)
+* [Kevin Shank](https://github.com/Bluekev22)
+
+### Contribution
+  Others should contribute by requesting permission to make additions or changes via our team organization. Alternatively, you can fork the repository and request to commit changes be reviewed through our organization. 
+
+## License:
+This project is licensed under MIT: https://opensource.org/licenses/MIT
 
 
